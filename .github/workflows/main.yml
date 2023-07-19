@@ -1,7 +1,7 @@
 # Nome do Workflow
 name: Noesis Academy
 
-# Acção que ira iniciar o workflow
+# Ação que ira iniciar o workflow
 on:
     push:
         branches: [ main ]
