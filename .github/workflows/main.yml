@@ -39,6 +39,9 @@ jobs:
         # Maquina que irá ser executada o workflow
         runs-on: ubuntu-latest
 
+        # Indica a dependencia para correr o Job    
+        needs: Testes_API
+
         steps:
             # "Quem" ira clonar o repositorio para a execução
           - name: checkout
