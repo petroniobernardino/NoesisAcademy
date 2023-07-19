@@ -24,3 +24,10 @@ jobs:
               --user $(id -u):$(id -g) \
               ppodgorsek/robot-framework:latest
 
+          - name: Upload reports
+            uses: actions/upload-artifact@v1
+            if: always()
+            with:
+              name: reports
+              path: ${{ github.workspace }}/reports                 
+
