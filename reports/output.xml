@@ -1,138 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.3 on win32)" generated="20230719 19:02:06.462" rpa="false" schemaversion="4">
-<suite id="s1" name="Api Loja" source="C:\Petronio\Noesis\Formações\Noesis Academy\NoesisAcademy\tests\api_loja.robot">
-<test id="s1-t1" name="Acesso a API" line="5">
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://serverest.dev/usuarios</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20230719 19:02:07.161" level="INFO">GET Request : url=https://serverest.dev/usuarios 
- path_url=/usuarios 
- headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20230719 19:02:07.162" level="INFO">GET Response : url=https://serverest.dev/usuarios 
- status=200, reason=OK 
- headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'x-moesif-transaction-id': '40df631b-455b-4abf-bc0d-03010a12a423', 'content-type': 'application/json; charset=utf-8', 'X-Cloud-Trace-Context': 'a68cfa18c0f87dce20844b3202481b2d;o=1', 'Date': 'Wed, 19 Jul 2023 18:02:08 GMT', 'Server': 'Google Frontend', 'Content-Length': '3116'} 
- body={
-    "quantidade": 14,
-    "usuarios": [
-        {
-            "nome": "Fulano da Silva",
-            "email": "fulano@qa.com",
-            "password": "teste",
-            "administrador": "true",
-            "_id": "0uxuPY0cbmQhpEz1"
-        },
-        {
-            "nome": "Marcos Vinicios Ferreira",
-            "email": "zunigabrittany@example.org",
-            "password": "VA9$5lJp&amp;@",
-            "administrador": "true",
-            "_id": "3JSY0DQWNWiWWBAh"
-        },
-        {
-            "nome": "Alma Dias",
-            "email": "am@gmail.com",
-            "password": "234",
-            "administrador": "false",
-            "_id": "4jjbz7loeBrCPFVK"
-        },
-        {
-            "nome": "Fulano da Silva",
-            "email": "quatest@df.com.br",
-            "password": "teste",
-            "administrador": "true",
-            "_id": "6TqeG3vjYFQwQ7Lt"
-        },
-        {
-            "email": "daysi.keebler@hotmail.com",
-            "password": "u34t626i",
-            "administrador": "true",
-            "nome": "Theo Bernhard",
-            "_id": "AmGU89KilCi2Tgse"
-        },
-        {
-            "nome": "Fulano da Silva",
-            "email": "beltrano@qa.com.br",
-            "password": "teste",
-            "administrador": "true",
-            "_id": "BE99J0neyuQptIBi"
-        },
-        {
-            "email": "moses.pfannerstill@gmail.com",
-            "password": "bc6zi0dyj",
-            "administrador": "true",
-            "nome": "Johanne McGlynn",
-            "_id": "EUxbtsSS9o75eArj"
-        },
-        {
-            "email": "chad.fisher@yahoo.com",
-            "password": "so4pino1b0",
-            "administrador": "true",
-            "nome": "Nakisha Vandervort",
-            "_id": "IrQtgXVGsefhCmnD"
-        },
-        {
-            "nome": "Marcos Vinicios",
-            "email": "wreeves@example.net",
-            "password": "p@96I)MduM",
-            "administrador": "true",
-            "_id": "g0zhsKJnPicRSGug"
-        },
-        {
-            "nome": "Marcos Vinicios Ferreira",
-            "email": "brandonnewman@example.com",
-            "password": "_qRw4Zoci0",
-            "administrador": "true",
-            "_id": "qG3e9b7rIKQ9726K"
-        },
-        {
-            "email": "basil.ruecker@hotmail.com",
-            "password": "goz411sj6",
-            "administrador": "true",
-            "nome": "Ms. Erica Cartwright",
-            "_id": "tAU5Dh6HWzePnOno"
-        },
-        {
-            "nome": "Marcos Vinicios",
-            "email": "jerome28@example.org",
-            "password": "@4dD0#FcuP",
-            "administrador": "true",
-            "_id": "u1OQbCmj4xg9Hu2F"
-        },
-        {
-            "nome": "Marcos Vinicios",
-            "email": "ricardo94@example.net",
-            "password": "jtB0JFYi^3",
-            "administrador": "true",
-            "_id": "uQE5KFAHoO2Gfynq"
-        },
-        {
-            "nome": "Marcos Vinicios Ferreira",
-            "email": "josephmurphy@example.com",
-            "password": "$HICy0eCR5",
-            "administrador": "true",
-            "_id": "yowkeRzsNgQxmRis"
-        }
-    ]
-} 
- </msg>
-<msg timestamp="20230719 19:02:07.162" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20230719 19:02:06.878" endtime="20230719 19:02:07.162"/>
+<robot generator="Robot 6.1 (Python 3.11.3 on win32)" generated="20230719 19:33:53.097" rpa="false" schemaversion="4">
+<suite id="s1" name="Web Loja" source="C:\Petronio\Noesis\Formações\Noesis Academy\NoesisAcademy\tests\web_loja.robot">
+<test id="s1-t1" name="Valida login" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230719 19:33:53.454" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230719 19:33:53.453" endtime="20230719 19:33:59.465"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${response}</arg>
-<arg>&lt;Response [200]&gt;</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20230719 19:02:07.163" level="INFO">Argument types are:
-&lt;class 'requests.models.Response'&gt;
-&lt;class 'str'&gt;</msg>
-<status status="PASS" starttime="20230719 19:02:07.163" endtime="20230719 19:02:07.163"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="user-name"]</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230719 19:33:59.467" level="INFO">Typing text 'standard_user' into text field '//input[@id="user-name"]'.</msg>
+<status status="PASS" starttime="20230719 19:33:59.466" endtime="20230719 19:33:59.654"/>
 </kw>
-<status status="PASS" starttime="20230719 19:02:06.878" endtime="20230719 19:02:07.164"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="password"]</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230719 19:33:59.655" level="INFO">Typing text 'secret_sauce' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20230719 19:33:59.654" endtime="20230719 19:33:59.787"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@id="login-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230719 19:33:59.789" level="INFO">Clicking element '//input[@id="login-button"]'.</msg>
+<status status="PASS" starttime="20230719 19:33:59.788" endtime="20230719 19:33:59.953"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>//div[@class="app_logo"]</arg>
+<arg>Swag Labs</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230719 19:34:00.004" level="INFO">Element '//div[@class="app_logo"]' contains text 'Swag Labs'.</msg>
+<status status="PASS" starttime="20230719 19:33:59.954" endtime="20230719 19:34:00.004"/>
+</kw>
+<status status="PASS" starttime="20230719 19:33:53.453" endtime="20230719 19:34:00.005"/>
 </test>
-<status status="PASS" starttime="20230719 19:02:06.473" endtime="20230719 19:02:07.165"/>
+<status status="PASS" starttime="20230719 19:33:53.107" endtime="20230719 19:34:00.007"/>
 </suite>
 <statistics>
 <total>
@@ -141,7 +47,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Api Loja">Api Loja</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Web Loja">Web Loja</stat>
 </suite>
 </statistics>
 <errors>

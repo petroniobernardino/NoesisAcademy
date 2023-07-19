@@ -2,7 +2,11 @@
 name: Noesis Academy
 
 # Acção que ira iniciar o workflow
-on: [push]
+on:
+    push:
+        branches: [ main ]
+    schedule:
+        - cron: '0 10 * * 1'  
 
 # Os Jobs do workflow
 jobs:
